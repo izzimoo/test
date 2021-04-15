@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F4EBDA"
+    android:layout_height="match_parent"
+    tools:context=".Achievement">
+
+    <ScrollView
+        android:layout_width="420dp"
+        android:layout_height="722dp"
+        android:background="@drawable/rounded_corner_cream"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement1"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="150dp"
+                            android:text="@string/Ach1"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="70dp"
+                            android:text="@string/AchD1"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement2"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup2"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="150dp"
+                            android:text="@string/Ach2"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="130dp"
+                            android:text="@string/AchD2"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement3"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup3"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="150dp"
+                            android:text="@string/Ach3"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="180dp"
+                            android:text="@string/AchD3"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement4"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup4"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="150dp"
+                            android:text="@string/Ach4"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="110dp"
+                            android:text="@string/AchD4"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement5"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup5"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="165dp"
+                            android:text="@string/Ach5"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="80dp"
+                            android:text="@string/AchD5"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement6"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup6"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="120dp"
+                            android:text="@string/Ach6"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="100dp"
+                            android:text="@string/AchD6"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement7"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup7"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="190dp"
+                            android:text="@string/Ach7"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="40dp"
+                            android:text="@string/AchD7"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement8"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup8"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="175dp"
+                            android:text="@string/Ach8"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="50dp"
+                            android:text="@string/AchD8"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement9"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup9"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="145dp"
+                            android:text="@string/Ach9"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="105dp"
+                            android:text="@string/AchD9"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement10"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup10"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="120dp"
+                            android:text="@string/Ach10"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="50dp"
+                            android:text="@string/AchD10"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="400dp"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="312dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/trophy" />
+
+                    <LinearLayout
+                        android:id="@+id/achievement11"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/achievement_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="ShowPopup11"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingRight="150dp"
+                            android:text="@string/Ach11"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:paddingRight="170dp"
+                            android:text="@string/AchD11"
+                            android:textColor="@color/greyblack" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

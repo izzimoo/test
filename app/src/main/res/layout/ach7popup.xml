@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="320dp"
+    android:layout_height="280dp"
+    android:background="@drawable/rounded_corner"
+    android:padding="5dp"
+    android:layout_gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:textColor="@color/white"
+        android:text="X"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@drawable/circlebackground"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="103dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/trophy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="@string/eggsemplary"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AchD7"
+            android:textColor="@color/greyblack"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/downloadProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/ListProject2"
+                android:paddingTop="5dp"
+                android:progress="60"
+                android:layout_height="wrap_content"
+                android:minHeight="20dip"
+                android:maxHeight="20dip"
+                android:width="80dip"
+                />
+
+            <TextView
+                android:id="@+id/ListProject2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="8dp"
+                android:paddingTop="5dp"
+                android:text="@string/progress"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/collegeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="@string/collect4"
+            android:textAllCaps="false"
+            app:cornerRadius="50dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
