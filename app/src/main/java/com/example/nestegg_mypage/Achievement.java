@@ -94,8 +94,12 @@ public class Achievement extends AppCompatActivity {
         myDialog.setContentView(R.layout.ach2popup);
         txtclose2 = (TextView) myDialog.findViewById(R.id.txtclose);
         btnCollect2 = (Button) myDialog.findViewById(R.id.collegeBtn);
+        if(prefSingleton.getInstance().getBtnPreference(pop2, unlocked) == "yes"){
+            Log.i("tag", "hmmm");
+            btnCollect2.setText("Already Redeemed");
+            btnCollect2.setBackgroundColor(Color.GRAY);
+        }
         Log.i("tag", state);
-        if(state=="yes") btnCollect2.setEnabled(false);
 
         txtclose2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,12 +107,11 @@ public class Achievement extends AppCompatActivity {
                 Log.i("tag", "here1");
                 if (state == "no"){
                     btnCollect2.setBackgroundColor(Color.GRAY);
-                    btnCollect2.setEnabled(false);
                     prefSingleton.getInstance().writePreference(pop2,"yes");
                     add();
                 }
                 else {
-                    btnCollect2.setClickable(false);
+                    myDialog.dismiss();
                 }
             }
         });
@@ -277,7 +280,6 @@ public class Achievement extends AppCompatActivity {
         eggp += 10;
         prefSingleton.getInstance().writePoints(points, eggp);
         Intent intent2 = new Intent(this, MainActivity.class);
-        //intent2.putExtra("EggspPoints", totaleggsp);
         Log.i("tag", "about to start activity");
         startActivity(intent2);
         //stesteggsp.setText(totaleggsp + " Eggsperience points");
