@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        prefSingleton.getInstance().Initialize(getApplicationContext());
         Intent mIntent2 = getIntent();
-        totaleggsp = mIntent2.getIntExtra("EggspPoints", 0);
+        totaleggsp = prefSingleton.getInstance().getPoints("points", 0);
         updateText();
 
         collect1 = (Button) findViewById(R.id.collegeBtn);
@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void addEggsP(View v) {
         totaleggsp += 5;
+        prefSingleton.getInstance().writePoints("points", totaleggsp);
         //Toast.makeText(this, "5 coins successfully earned!", Toast.LENGTH_SHORT).show();
         updateText();
     }
@@ -113,12 +114,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void unlockB1(){
-        unlock1.setBackgroundColor(getResources().getColor(R.color.babyblue));
-        lock.setVisibility(View.GONE);
+      //  unlock1.setBackgroundColor(getResources().getColor(R.color.babyblue));
+       // lock.setVisibility(View.GONE);
     }
     public void unlockB2(){
-        unlock2.setBackgroundColor(getResources().getColor(R.color.babyblue));
-        lock2.setVisibility(View.GONE);
+        //unlock2.setBackgroundColor(getResources().getColor(R.color.babyblue));
+        //lock2.setVisibility(View.GONE);
     }
 
 //    public void unlockC1(){

@@ -12,6 +12,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -27,6 +28,19 @@ public class Achievement extends AppCompatActivity {
     int check = 0;
     TextView txtclose, testeggsp;
     Button btnCollect;
+    public static final String pop1 = "pop1" ;
+    public static final String pop2 = "pop2" ;
+    public static final String pop3 = "pop3" ;
+    public static final String pop4 = "pop4" ;
+    public static final String pop5 = "pop5" ;
+    public static final String pop6 = "pop6" ;
+    public static final String pop7 = "pop7" ;
+    public static final String pop8 = "pop8" ;
+    public static final String pop9 = "pop9" ;
+    public static final String pop10 = "pop10" ;
+    public static final String pop11 = "pop11" ;
+    public static final String points = "points" ;
+    public String unlocked = "no";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +49,6 @@ public class Achievement extends AppCompatActivity {
         Intent mIntent = getIntent();
 
         totaleggsp = mIntent.getIntExtra("EggspPoints", 0);
-
         myDialog = new Dialog(this);
     }
 
@@ -56,10 +69,10 @@ public class Achievement extends AppCompatActivity {
         btnCollect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.i("tag", "here");
                 if (totaleggsp >= 10){
                     btnCollect.setBackgroundColor(Color.GRAY);
                     btnCollect.setEnabled(false);
-                    Toast.makeText(getApplicationContext(), String.valueOf(totaleggsp), Toast.LENGTH_LONG).show();
                     add();
                     }
 
@@ -77,13 +90,26 @@ public class Achievement extends AppCompatActivity {
     public void ShowPopup2(View v){
         TextView txtclose2;
         Button btnCollect2;
+        String state = prefSingleton.getInstance().getBtnPreference(pop2, unlocked);
         myDialog.setContentView(R.layout.ach2popup);
         txtclose2 = (TextView) myDialog.findViewById(R.id.txtclose);
         btnCollect2 = (Button) myDialog.findViewById(R.id.collegeBtn);
+        Log.i("tag", state);
+        if(state=="yes") btnCollect2.setEnabled(false);
+
         txtclose2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myDialog.dismiss();
+                Log.i("tag", "here1");
+                if (state == "no"){
+                    btnCollect2.setBackgroundColor(Color.GRAY);
+                    btnCollect2.setEnabled(false);
+                    prefSingleton.getInstance().writePreference(pop2,"yes");
+                    add();
+                }
+                else {
+                    btnCollect2.setClickable(false);
+                }
             }
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -246,9 +272,13 @@ public class Achievement extends AppCompatActivity {
 
     public void add() {
         //Toast.makeText(getApplicationContext(), "HERE!", LENGTH_SHORT).show();
-        totaleggsp += 10;
+        Log.i("tag", "In add");
+        int eggp = prefSingleton.getInstance().getPoints(points, 0);
+        eggp += 10;
+        prefSingleton.getInstance().writePoints(points, eggp);
         Intent intent2 = new Intent(this, MainActivity.class);
-        intent2.putExtra("EggspPoints", totaleggsp);
+        //intent2.putExtra("EggspPoints", totaleggsp);
+        Log.i("tag", "about to start activity");
         startActivity(intent2);
         //stesteggsp.setText(totaleggsp + " Eggsperience points");
 
