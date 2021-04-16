@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F4EBDA"
     android:layout_height="match_parent"
     tools:context=".Achievement">
 
     <ScrollView
         android:layout_width="420dp"
         android:layout_height="722dp"
-        android:background="@drawable/rounded_corner_cream"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +44,7 @@
                         android:background="@drawable/achievement_button"
                         android:clickable="true"
                         android:focusable="true"
-                        android:onClick="ShowPopup"
+                        android:onClick="ShowPopup1"
                         android:orientation="vertical"
                         android:padding="5dp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +68,7 @@
                             android:gravity="center"
                             android:paddingRight="70dp"
                             android:text="@string/AchD1"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -125,7 +124,7 @@
                             android:gravity="center"
                             android:paddingRight="130dp"
                             android:text="@string/AchD2"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -181,7 +180,7 @@
                             android:gravity="center"
                             android:paddingRight="180dp"
                             android:text="@string/AchD3"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -237,7 +236,7 @@
                             android:gravity="center"
                             android:paddingRight="110dp"
                             android:text="@string/AchD4"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -293,7 +292,7 @@
                             android:gravity="center"
                             android:paddingRight="80dp"
                             android:text="@string/AchD5"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -349,7 +348,7 @@
                             android:gravity="center"
                             android:paddingRight="100dp"
                             android:text="@string/AchD6"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -405,7 +404,7 @@
                             android:gravity="center"
                             android:paddingRight="40dp"
                             android:text="@string/AchD7"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -461,7 +460,7 @@
                             android:gravity="center"
                             android:paddingRight="50dp"
                             android:text="@string/AchD8"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -517,7 +516,7 @@
                             android:gravity="center"
                             android:paddingRight="105dp"
                             android:text="@string/AchD9"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -573,7 +572,7 @@
                             android:gravity="center"
                             android:paddingRight="50dp"
                             android:text="@string/AchD10"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 
@@ -629,7 +628,7 @@
                             android:gravity="center"
                             android:paddingRight="170dp"
                             android:text="@string/AchD11"
-                            android:textColor="@color/greyblack" />
+                            android:textColor="@color/darkAppBrown" />
 
                     </LinearLayout>
 

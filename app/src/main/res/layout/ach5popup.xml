@@ -4,15 +4,15 @@
     android:orientation="vertical"
     android:layout_width="320dp"
     android:layout_height="280dp"
-    android:background="@drawable/rounded_corner"
+    android:background="@color/appGreen"
     android:padding="5dp"
     android:layout_gravity="center_horizontal">
 
     <TextView
-        android:id="@+id/txtclose"
+        android:id="@+id/txtclose5"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:textColor="@color/white"
+        android:textColor="@color/appBrown"
         android:text="X"
         android:textStyle="bold"
         android:layout_gravity="end"
@@ -50,42 +50,14 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"/>
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ProgressBar
-                android:id="@+id/downloadProgressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="wrap_content"
-                android:layout_toRightOf="@+id/ListProject2"
-                android:paddingTop="5dp"
-                android:progress="60"
-                android:layout_height="wrap_content"
-                android:minHeight="20dip"
-                android:maxHeight="20dip"
-                android:width="80dip"
-                />
-
-            <TextView
-                android:id="@+id/ListProject2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
-                android:layout_marginRight="8dp"
-                android:paddingTop="5dp"
-                android:text="@string/progress"
-                android:textColor="@color/white" />
-
-        </RelativeLayout>
-
         <Button
-            android:id="@+id/collegeBtn"
+            android:id="@+id/popupBtn5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
-            android:backgroundTint="@color/teal_200"
-            android:text="@string/collect4"
+            android:backgroundTint="@color/appBrown"
+            android:text="@string/collect5"
             android:textAllCaps="false"
             app:cornerRadius="50dp" />
 
