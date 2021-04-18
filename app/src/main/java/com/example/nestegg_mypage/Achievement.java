@@ -73,7 +73,6 @@ public class Achievement extends AppCompatActivity {
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
-
     }
 
     ///////////////////////////////////////////// Second PopUP window code //////////////////////////////////////////////////
@@ -90,12 +89,10 @@ public class Achievement extends AppCompatActivity {
             btnCollect2.setText(redeemed);
             btnCollect2.setBackgroundColor(Color.GRAY);
         }
-        Log.i("tag", state);
 
         txtclose2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("tag", "here1");
                 if (totaleggsp >= 20 && state.equals("no")){
                     btnCollect2.setBackgroundColor(Color.GRAY);
                     prefSingleton.getInstance().writePreference(pop2,"yes");
@@ -109,7 +106,6 @@ public class Achievement extends AppCompatActivity {
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
-
     }
 
     ///////////////////////////////////////////// Third PopUP window code //////////////////////////////////////////////////

@@ -35,6 +35,12 @@ public class prefSingleton {
         e.commit();
     }
 
+    public void writeUpdate(String value){
+        SharedPreferences.Editor e = mMyPreferences.edit();
+        e.putString("update", value);
+        e.commit();
+    }
+
     public String getBtnPreference(String key, String defaultVal){
         String state = mMyPreferences.getString(key, defaultVal);
         return state;
@@ -43,5 +49,9 @@ public class prefSingleton {
     public int getPoints(String key, int defaultVal){
         int points = mMyPreferences.getInt(key, defaultVal);
         return points;
+    }
+    public String getUpdate(){
+        String update = mMyPreferences.getString("update", "xxx");
+        return update;
     }
 }

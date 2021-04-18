@@ -1,12 +1,12 @@
 package com.example.nestegg_mypage;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -156,14 +156,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        updateText();
-        //calculateExp(10);
+        calculateExp(100, "now2");
     }
 
     public void openAchievement(){
         Intent intent = new Intent(this, Achievement.class);
         startActivity(intent);
-
     }
 
     public void addEggsP(View v) {
@@ -174,11 +172,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void updateText(){
         testeggsp = (TextView) findViewById(R.id.points);
-        //calculateExp(10);
         totaleggsp = prefSingleton.getInstance().getPoints("points", 0);
         String displayXp = totaleggsp + " Eggsperience points";
         testeggsp.setText(displayXp);
-        //Toast.makeText(getApplicationContext(), String.valueOf(totaleggsp), LENGTH_SHORT).show();
 
         if (totaleggsp >= 20)
             unlockB1();
@@ -203,17 +199,16 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-    public void unlockB1(){
+    public void unlockB1() {
         String state = prefSingleton.getInstance().getBtnPreference("btn1", "no");
         if (state.equals("no")) {
             unlock1.setBackgroundColor(getResources().getColor(R.color.darkAppGreen));
-        }
-        else if(state.equals("yes")){
+        } else if (state.equals("yes")) {
             unlock1.setText("Redeemed");
             unlock1.setBackgroundColor(getResources().getColor(R.color.appBrown));
         }
-        //lock.setVisibility(View.GONE);
     }
+
 
     public void unlockB2(){
         String state = prefSingleton.getInstance().getBtnPreference("btn2", "no");
@@ -286,28 +281,41 @@ public class MainActivity extends AppCompatActivity {
         //lock2.setVisibility(View.GONE);
     }
 
-//    public void calculateExp(int balanceDiff){
-//        int exp;
-//
-//        switch(balanceDiff){
-//            case 100:
-//                exp = 60;
-//                break;
-//            case 500:
-//                exp = 250;
-//                break;
-//            case 1000:
-//                exp = 500;
-//                break;
-//            default:
-//                exp = (balanceDiff/5)*2;
-//        }
-//        totaleggsp = prefSingleton.getInstance().getPoints("points", 0);
-//        prefSingleton.getInstance().writePoints("points", (exp+totaleggsp));
-//        updateText();
-//
-//        //prefSingleton.getInstance().writePoints("points", exp);
-//    }
+       /* if(state.equals("no")){
+            unlock2.setBackgroundColor(getResources().getColor(R.color.babyblue));
+        }else{
+            unlock2.setBackgroundColor(Color.GRAY);
+            unlock2.setEnabled(false);
+        }
+    }*/
 
+    public void calculateExp(int balanceDiff, String update){
+        int exp;
+        String lastUpdate;
+        lastUpdate = prefSingleton.getInstance().getUpdate();
+        Log.i("AHHHHHHHHHHHHHHHHHHHHHH", update);
+        if(lastUpdate.equals(update)){
+            totaleggsp = totaleggsp + 0;
+        }else{
+            Log.i("UPDATE", "Calculating");
+            switch(balanceDiff) {
+                case 100:
+                    exp = 60;
+                    break;
+                case 500:
+                    exp = 250;
+                    break;
+                case 1000:
+                    exp = 500;
+                    break;
+                default:
+                    exp = (balanceDiff/5)*2;
+            }
+            totaleggsp = totaleggsp + exp;
+            prefSingleton.getInstance().writeUpdate(update);
+        }
+        prefSingleton.getInstance().writePoints("points", totaleggsp);
+        updateText();
+    }
 }
 
